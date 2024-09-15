@@ -2,7 +2,7 @@
 ssh-agent bash -c 'ssh-add ~/.ssh/id_ed25519; git clone git@github.com:sergiosvieira/siq.git'
 cd siq
 git checkout -b development
-git pull origin development
+ssh-agent bash -c 'ssh-add ~/.ssh/id_ed25519; git pull origin development'
 cd siq_project
 pip install -r requirements.txt
 python manage.py makemigrations
