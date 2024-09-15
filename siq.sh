@@ -1,5 +1,5 @@
 #!/bin/bash
-git clone git@github.com:sergiosvieira/siq.git
+ssh-agent bash -c 'ssh-add ~/.ssh/id_ed25519; git clone git@github.com:sergiosvieira/siq.git'
 cd siq
 git checkout -b development
 git pull origin development
